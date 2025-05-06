@@ -1,4 +1,4 @@
-# Тестовое задание AitiGuru
+# Проектная работа "Цифровая карта"
 ## Инструкция по установке
 - Клонируйте репозиторий: \
 `git@github.com:Aleksandr-Tokmashov/digital-map-react.git` \
