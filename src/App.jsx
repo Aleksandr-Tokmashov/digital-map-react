@@ -1,10 +1,11 @@
 
-import { GeoMap } from './GeoMap'
+import { PlotlyChart } from './charts/PlotlyChart'
 
 function App() {
   return (
     <>
-      <GeoMap></GeoMap>
+      <PlotlyChart></PlotlyChart>
+      <PlotlyChart></PlotlyChart>
     </>
   )
 }
