@@ -1,17 +1,18 @@
 import React from 'react';
+import './IncidentTable.css';
 
 export const IncidentTable = () => {
   const data = [
     { date: '14.03.25', region: 'МОСК', station: 'ХРАПУНОВО', type: 'Наезд' },
     { date: '15.03.25', region: 'ПРИВ', station: 'КУРДЮМ', type: 'Сход при маневрах' },
-    { date: '16.03.25', region: 'МОСК', station: 'ГЛАВСК', type: 'Сход при маневрах' },
+    { date: '16.03.25', region: 'МОСК', station: 'ПЛАВСК', type: 'Сход при маневрах' },
     { date: '17.03.25', region: 'Ю-УР', station: 'ОРЕНБУРГ', type: 'Сход при маневрах' },
   ];
 
   return (
-    <div>
+    <div className="incident-table">
       <h3>Инциденты за неделю</h3>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <table>
         <thead>
           <tr>
             <th>Дата</th>
