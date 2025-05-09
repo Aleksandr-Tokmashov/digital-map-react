@@ -6,8 +6,12 @@ git@github.com:Aleksandr-Tokmashov/digital-map-react.git
 cd digital-map-react
 ```
 - Установите зависимости: \
-```npm install```
+```
+npm install
+```
 - Запустите в development режиме: \
-```npm run dev```
+```
+npm run dev
+```
 
 
