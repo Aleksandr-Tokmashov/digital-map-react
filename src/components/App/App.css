@@ -1,3 +1,7 @@
-.custom-map {
-    
+.app-container {
+    display: flex;
+}
+
+.charts-container {
+    width: 50%;
 }

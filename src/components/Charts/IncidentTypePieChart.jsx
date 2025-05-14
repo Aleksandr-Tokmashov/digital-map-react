@@ -20,8 +20,6 @@ export const IncidentTypePieChart = () => {
   const deltaPercent = total2024 === 0 ? 100 : Math.round((deltaTotal / total2024) * 100);
 
   const deltaColor = deltaPercent > 0 ? '#ff4444' : deltaPercent < 0 ? '#00C851' : '#666';
-  const sign = deltaPercent > 0 ? '+' : deltaPercent < 0 ? '−' : '';
-
   const labelsRaw = [
     'Излом рельса',
     'Сход при маневрах',
@@ -69,6 +67,7 @@ export const IncidentTypePieChart = () => {
   };
 
   const options = {
+    animation: false,
     plugins: {
       legend: {
         display: false, // Отключаем стандартную легенду
@@ -110,13 +109,8 @@ export const IncidentTypePieChart = () => {
   return (
     <div style={{ 
       position: 'relative', 
-      width: '100%', 
-      height: '600px',
-      padding: '20px',
-      border: '1px solid #ddd',
-      borderRadius: '8px',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-      display: 'flex'
+      display: 'flex',
+      height: "20%",
     }}>
       <div style={{ flex: 1 }}>
         <Pie 

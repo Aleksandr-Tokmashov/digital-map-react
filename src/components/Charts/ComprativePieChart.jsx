@@ -34,6 +34,7 @@ export const ComparativePieChart = () => {
   };
 
   const options = {
+    animation: false,
     plugins: {
       legend: {
         position: 'right',
@@ -76,7 +77,7 @@ export const ComparativePieChart = () => {
           size: 12,
           weight: 'bold',
         },
-        formatter: (value, context) => {
+        formatter: (value) => {
           const percent = ((value / total2025) * 100).toFixed(1) + '%';
           return `${percent}`;
         },
@@ -85,7 +86,7 @@ export const ComparativePieChart = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px', position: 'relative' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: "20%", position: 'relative' }}>
       <Doughnut data={data} options={options} plugins={[ChartDataLabels]} />
       <div style={{
         position: 'absolute',

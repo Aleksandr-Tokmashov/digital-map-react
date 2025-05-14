@@ -11,6 +11,10 @@ npm install
 npm install react-chartjs-2 chart.js
 npm install chartjs-plugin-datalabels
 ```
+- Запустите сервер:
+```
+python backend/server.py
+```
 - Запустите в development режиме: 
 ```
 npm run dev

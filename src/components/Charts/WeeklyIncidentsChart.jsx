@@ -7,10 +7,9 @@ export const WeeklyIncidentsChart = () => {
   const labels = ['07.03–13.03.25', '14.03–21.03.25'];
   const values = [4, 4];
 
-  // Рассчитываем изменения
   const delta = values[1] - values[0];
   const percentChange = values[0] === 0 ? 100 : Math.round((delta / values[0]) * 100);
-  const color = delta > 0 ? '#ff4444' : delta < 0 ? '#00C851' : '#666';
+  const color = delta > 0 ? '#D0D8E8' : delta < 0 ? '#455D70' : '#666';
   const sign = delta > 0 ? '+' : delta < 0 ? '−' : '';
 
   const data = {
@@ -27,17 +26,13 @@ export const WeeklyIncidentsChart = () => {
 
   return (
     <div style={{ 
-      width: '100%', 
-      height: '400px',
       position: 'relative',
-      padding: '20px',
-      border: '1px solid #ddd',
-      borderRadius: '8px',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      height: "10%",
     }}>
       <Bar 
         data={data} 
         options={{
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
@@ -79,7 +74,6 @@ export const WeeklyIncidentsChart = () => {
         plugins={[ChartDataLabels]}
       />
       
-      {/* Блок с процентом всегда отображается */}
       <div style={{
         position: 'absolute',
         top: '30%',

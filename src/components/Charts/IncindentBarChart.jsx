@@ -25,6 +25,7 @@ export const IncidentGrowthChart = () => {
   };
 
   const options = {
+    animation: false,
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -77,14 +78,9 @@ export const IncidentGrowthChart = () => {
   };
 
   return (
-    <div style={{ 
-      width: '100%', 
-      height: '400px',
+    <div style={{
       position: 'relative',
-      padding: '20px',
-      border: '1px solid #ddd',
-      borderRadius: '8px',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      height: "20%",
     }}>
       <Bar 
         data={data} 
