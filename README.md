@@ -8,8 +8,6 @@ cd digital-map-react
 - Установите зависимости: 
 ```
 npm install
-npm install react-chartjs-2 chart.js
-npm install chartjs-plugin-datalabels
 ```
 - Запустите сервер:
 ```
