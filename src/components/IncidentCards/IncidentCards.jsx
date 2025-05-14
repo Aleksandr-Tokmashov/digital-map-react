@@ -59,7 +59,7 @@ const IncidentCards = ({ incidents, typeColors }) => {
               <div
                 key={type}
                 className="incident-type-group"
-                style={{ "--type-color": typeColors[type] || "#FFE699" }}
+                style={{ "--type-color": typeColors[type] || "#BFC5CE" }}
               >
                 <h2 className="incident-type-header">{type}</h2>
                 <div className="incident-cards-group">
