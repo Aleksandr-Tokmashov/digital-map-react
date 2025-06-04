@@ -1,43 +1,45 @@
 .incidents-container {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0;
   padding: 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.incident-row {
-  width: 100%;
+.headers-row {
   display: flex;
-  gap: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.header-cell {
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cards-row {
+  display: flex;
+  width: 100%;
   margin-bottom: 15px;
 }
 
-.incident-type-group {
-  display: flex;
-  flex-direction: column;
-}
-
 .incident-type-header {
-  font-size: 1.1em;
-  margin-bottom: 5px;
+  font-size: 14px;
   color: #333;
   border-bottom: 4px solid var(--type-color);
   padding-bottom: 3px;
   white-space: nowrap;
-}
-
-.incident-cards-group {
-  display: flex;
-  gap: 8px;
+  margin: 0;
+  width: 100%;
 }
 
 .incident-card {
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 220px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -45,8 +47,17 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: white;
+  flex: 1;
+  min-width: 0;
+  margin-right: 10px;
+  box-sizing: border-box;
 }
 
+.incident-card:last-child {
+  margin-right: 0;
+}
+
+/* Остальные стили остаются прежними */
 .incident-date {
   font-weight: bold;
   font-size: 0.9em;
@@ -75,7 +86,7 @@
   border: 1px solid #ddd;
   margin: 5px 0 10px 0;
   overflow: hidden;
-  align-self: center; /* Для центрирования в карточке */
+  align-self: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -101,7 +112,6 @@
 
 @media (max-height: 800px) {
   .incident-card {
-    width: 200px;
     height: 240px;
   }
 
